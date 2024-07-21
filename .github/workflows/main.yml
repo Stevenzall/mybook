@@ -15,10 +15,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: taiki-e/install-action@mdbook
       - name: patch for gh-pages build
-        run: mv book/theme/head.hbs._ book/theme/head.hbs
+        run: mv rocketmq/theme/head.hbs._ rocketmq/theme/head.hbs
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: book
+          path: rocketmq/book
   deploy:
     needs: build
     permissions:
