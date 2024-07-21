@@ -16,4 +16,4 @@ jobs:
       - uses: taiki-e/install-action@mdbook
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: mybook/book
+          path: book
