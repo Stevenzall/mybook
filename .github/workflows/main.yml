@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
+      - name: setup rust toolchain
+        run: rustup show
       - uses: taiki-e/install-action@mdbook
       - name: patch for gh-pages build
         run: mv rocketmq/theme/head.hbs._ rocketmq/theme/head.hbs
