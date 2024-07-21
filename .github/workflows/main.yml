@@ -1,0 +1,19 @@
+name: CI (main)
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: taiki-e/install-action@mdbook
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: mybook/book
